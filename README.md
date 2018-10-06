@@ -7,3 +7,5 @@ This respository is a simple spring boot application, that demonstrates a few de
 * Strategy
 * Proxy
 * Observer
+
+Also checkout Rest API example: https://github.com/indrekru/spring-boot-rest-api
