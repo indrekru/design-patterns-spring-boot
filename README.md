@@ -1,4 +1,4 @@
-# Design patterns in spring boot [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20design%20patterns%20in%20spring%20boot%20https%3A%2F%2Fgithub.com%2Findrekru%2Fdesign-patterns-spring-boot
+# Design patterns in spring boot [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20design%20patterns%20in%20spring%20boot%20https%3A%2F%2Fgithub.com%2Findrekru%2Fdesign-patterns-spring-boot)
 
 This repository is a simple spring boot application, that demonstrates a few design patterns:
 
