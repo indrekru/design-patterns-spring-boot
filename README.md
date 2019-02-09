@@ -10,6 +10,8 @@ This repository is a simple spring boot application, that demonstrates a few des
 
 ## Running
 
+This demo application retrieves contact phone numbers from 2 different bank's websites (more banks can be added) with specific implementations per bank and offers a nice interface to hide the specifics.
+
 1. Run `mvn install` from the root
 2. Run `mvn spring-boot:run`
 3. Open browser and go to http://localhost:8080/api/v1/banks and you should see the results
