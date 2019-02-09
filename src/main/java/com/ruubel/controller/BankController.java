@@ -27,7 +27,7 @@ public class BankController {
 	}
 
 	@GetMapping
-	private ResponseEntity home() {
+	private ResponseEntity banks() {
 		List<BankInformation> contacts = bankService.getContacts();
 		return new ResponseEntity(contacts, HttpStatus.OK);
 	}
