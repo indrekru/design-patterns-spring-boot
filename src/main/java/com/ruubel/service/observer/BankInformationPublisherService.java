@@ -1,6 +1,6 @@
-package com.investly.service.observer;
+package com.ruubel.service.observer;
 
-import com.investly.model.BankInformation;
+import com.ruubel.model.BankInformation;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

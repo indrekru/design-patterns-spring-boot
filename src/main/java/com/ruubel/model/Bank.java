@@ -1,4 +1,4 @@
-package com.investly.model;
+package com.ruubel.model;
 
 /**
  * Created by indrek.ruubel on 02/07/2016.

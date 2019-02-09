@@ -1,8 +1,6 @@
-package com.investly.service.observer;
+package com.ruubel.service.observer;
 
-import com.investly.model.BankInformation;
-import com.investly.service.observer.BankInformationPublisherService;
-import com.investly.service.observer.BankInformationReceived;
+import com.ruubel.model.BankInformation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,14 +13,13 @@ import java.util.List;
 @Service
 public class PrinterService implements BankInformationReceived {
 
-	@Autowired
 	private BankInformationPublisherService bankInformationPublisherService;
 
-	@PostConstruct
-	public void setup() {
-		bankInformationPublisherService.subscribe(this);
+	@Autowired
+	public PrinterService(BankInformationPublisherService bankInformationPublisherService) {
+		this.bankInformationPublisherService = bankInformationPublisherService;
+		this.bankInformationPublisherService.subscribe(this);
 	}
-
 
 	@Override
 	public void receivedBankInformation(List<BankInformation> data) {

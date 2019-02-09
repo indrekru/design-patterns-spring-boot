@@ -1,9 +1,9 @@
-package com.investly.service;
+package com.ruubel.service;
 
-import com.investly.model.BankInformation;
-import com.investly.service.factory.ScraperFactoryService;
-import com.investly.service.observer.BankInformationPublisherService;
-import com.investly.service.strategy.BankScraperStrategy;
+import com.ruubel.model.BankInformation;
+import com.ruubel.service.factory.ScraperFactoryService;
+import com.ruubel.service.observer.BankInformationPublisherService;
+import com.ruubel.service.strategy.BankScraperStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,17 +17,16 @@ import java.util.List;
 @Service
 public class BankService {
 
-	@Autowired
 	private BankInformationPublisherService bankInformationPublisherService;
-
-	@Autowired
 	private ScraperFactoryService scraperFactoryService;
 
 	private List<BankScraperStrategy> strategies;
 
-	@PostConstruct
-	public void setup() {
-		strategies = scraperFactoryService.createStrategies();
+	@Autowired
+	public BankService(BankInformationPublisherService bankInformationPublisherService, ScraperFactoryService scraperFactoryService) {
+		this.bankInformationPublisherService = bankInformationPublisherService;
+		this.scraperFactoryService = scraperFactoryService;
+		this.strategies = this.scraperFactoryService.createStrategies();
 	}
 
 	public List<BankInformation> getContacts() {

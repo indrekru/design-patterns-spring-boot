@@ -1,6 +1,6 @@
-package com.investly.service.strategy;
+package com.ruubel.service.strategy;
 
-import com.investly.model.BankInformation;
+import com.ruubel.model.BankInformation;
 
 /**
  * Created by indrek.ruubel on 02/07/2016.

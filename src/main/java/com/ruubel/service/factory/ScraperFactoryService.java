@@ -1,9 +1,8 @@
-package com.investly.service.factory;
+package com.ruubel.service.factory;
 
-import com.investly.model.BankInformation;
-import com.investly.service.strategy.BankScraperStrategy;
-import com.investly.service.strategy.SebScraper;
-import com.investly.service.strategy.SwedbankScraper;
+import com.ruubel.service.strategy.BankScraperStrategy;
+import com.ruubel.service.strategy.SebScraper;
+import com.ruubel.service.strategy.SwedbankScraper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

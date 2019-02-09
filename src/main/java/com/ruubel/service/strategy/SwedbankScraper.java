@@ -1,9 +1,10 @@
-package com.investly.service.strategy;
+package com.ruubel.service.strategy;
 
-import com.investly.model.Bank;
-import com.investly.model.BankInformation;
+import com.ruubel.model.Bank;
+import com.ruubel.model.BankInformation;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
@@ -17,16 +18,16 @@ public class SwedbankScraper implements BankScraperStrategy {
 
 	@Override
 	public BankInformation scrape() {
-		Document doc = null;
+		String number = "FAILED";
 		try {
-			doc = Jsoup.connect(bankUrl).get();
+			Document doc = Jsoup.connect(bankUrl).get();
+
+			Elements footers = doc.select("section.footer-section");
+			Element tel = footers.get(0).select("div.tel").get(0);
+			number = tel.text();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-		Elements footers = doc.select("#legacy-footer");
-		Elements lefts = footers.get(0).select(".left");
-		String number = lefts.get(0).text();
 
 		return new BankInformation(Bank.SWEDBANK, number);
 	}

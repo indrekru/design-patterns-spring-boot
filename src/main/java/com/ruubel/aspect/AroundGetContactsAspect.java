@@ -1,4 +1,4 @@
-package com.investly.aspect;
+package com.ruubel.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @Component
 public class AroundGetContactsAspect {
 
-	@Pointcut("execution(* com.investly.service.BankService.*(..))")
+	@Pointcut("execution(* com.ruubel.service.BankService.*(..))")
 	public void exampleService() {}
 
 	@Around("exampleService()")
