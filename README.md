@@ -17,14 +17,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-First, clone the project to your local environment:
+1. Clone the project to your local environment:
 ```
 git clone https://github.com/indrekru/design-patterns-spring-boot.git
 ```
 
-You need maven installed in your environment:
+2. You need maven installed on your environment:
 
-#### Mac via homebrew:
+#### Mac (homebrew):
 
 ```
 brew install maven
