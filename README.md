@@ -29,7 +29,7 @@ You need maven installed in your environment:
 ```
 brew install maven
 ```
-#### Ubunru:
+#### Ubuntu:
 ```
 sudo apt-get install maven
 ```
