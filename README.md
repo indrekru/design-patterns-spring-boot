@@ -1,4 +1,5 @@
 # Design patterns in spring boot
+
 This repository is a simple spring boot application, that demonstrates a few design patterns:
 
 * Singleton
@@ -8,12 +9,70 @@ This repository is a simple spring boot application, that demonstrates a few des
 * Proxy
 * Observer
 
-## Running
-
 This demo application retrieves contact phone numbers from 2 different bank's websites (more banks can be added) with specific implementations per bank and offers a nice interface to hide the specifics.
 
-1. Run `mvn install` from the root
-2. Run `mvn spring-boot:run`
-3. Open browser and go to http://localhost:8080/api/v1/banks and you should see the results
+## Getting Started
 
-Also check out Spring Boot 2 Oauth2 resource server example: https://github.com/indrekru/spring-boot-2-oauth2-resource-server
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+First, clone the project to your local environment:
+```
+git clone https://github.com/indrekru/design-patterns-spring-boot.git
+```
+
+You need maven installed in your environment:
+
+#### Mac via homebrew:
+
+```
+brew install maven
+```
+#### Ubunru:
+```
+sudo apt-get install maven
+```
+
+### Installing
+
+Once you have maven installed on your environment, install the project dependencies via:
+
+```
+mvn install
+```
+
+## Running
+
+Once you have installed dependencies, this can be run from the `Application.java` main method directly,
+or from a command line:
+```
+mvn spring-boot:run
+```
+
+Open browser and go to http://localhost:8080/api/v1/banks and you should see the results
+
+## Built With
+
+* [Spring Boot](https://spring.io/projects/spring-boot) - Spring Boot 2
+* [Maven](https://maven.apache.org/) - Dependency Management
+
+## Contributing
+
+If you have any improvement suggestions please create a pull request and I'll review it.
+
+
+## Authors
+
+* **Indrek Ruubel** - *Initial work* - [PurpleBooth](https://github.com/indrekru)
+
+See also the list of [contributors](https://github.com/indrekru/design-patterns-spring-boot/graphs/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License
+
+## Acknowledgments
+
+* Big thanks to Pivotal for Spring Boot framework, love it!
+* Also check out my Spring Boot 2 Oauth2 resource server example: https://github.com/indrekru/spring-boot-2-oauth2-resource-server
