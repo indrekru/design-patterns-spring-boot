@@ -19,18 +19,15 @@ public class BankService {
 	private BankInformationPublisherService bankInformationPublisherService;
 	private ScraperFactoryService scraperFactoryService;
 
-	private List<BankScraperStrategy> strategies;
-
 	@Autowired
 	public BankService(BankInformationPublisherService bankInformationPublisherService, ScraperFactoryService scraperFactoryService) {
 		this.bankInformationPublisherService = bankInformationPublisherService;
 		this.scraperFactoryService = scraperFactoryService;
-		this.strategies = this.scraperFactoryService.createStrategies();
 	}
 
 	public List<BankInformation> getContacts() {
-		List<BankInformation> bankInformations = new ArrayList<BankInformation>();
-		for (BankScraperStrategy strategy : strategies) {
+		List<BankInformation> bankInformations = new ArrayList<>();
+		for (BankScraperStrategy strategy : scraperFactoryService.getStrategies()) {
 			BankInformation bank = strategy.scrape();
 			bankInformations.add(bank);
 		}

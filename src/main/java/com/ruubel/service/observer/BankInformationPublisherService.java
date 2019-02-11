@@ -12,7 +12,11 @@ import java.util.List;
 @Service
 public class BankInformationPublisherService {
 
-	private List<BankInformationReceived> subscribers = new ArrayList<BankInformationReceived>();
+	private List<BankInformationReceived> subscribers;
+
+	public BankInformationPublisherService() {
+		subscribers = new ArrayList<>();
+	}
 
 	public void subscribe(BankInformationReceived subscriber) {
 		subscribers.add(subscriber);

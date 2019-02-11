@@ -42,6 +42,13 @@ Once you have maven installed on your environment, install the project dependenc
 mvn install
 ```
 
+## Running the tests
+
+All tests can be run:
+```
+mvn test
+```
+
 ## Running
 
 Once you have installed dependencies, this can be run from the `Application.java` main method directly,

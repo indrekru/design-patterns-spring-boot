@@ -14,11 +14,21 @@ import java.util.List;
 @Service
 public class ScraperFactoryService {
 
-	public List<BankScraperStrategy> createStrategies() {
+	private List<BankScraperStrategy> strategies;
+
+	public ScraperFactoryService() {
+		strategies = createStrategies();
+	}
+
+	private List<BankScraperStrategy> createStrategies() {
 		return new ArrayList<BankScraperStrategy>() {{
 			add(new SebScraper());
 			add(new SwedbankScraper());
 		}};
+	}
+
+	public List<BankScraperStrategy> getStrategies() {
+		return strategies;
 	}
 
 }
