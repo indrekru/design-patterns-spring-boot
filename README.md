@@ -8,6 +8,7 @@ This repository is a simple spring boot application, that demonstrates a few des
 * Strategy
 * Proxy
 * Observer
+* Aspect-oriented programming
 
 This demo application retrieves contact phone numbers from 2 different bank's websites (more banks can be added) with specific implementations per bank and offers a nice interface to hide the specifics.
 

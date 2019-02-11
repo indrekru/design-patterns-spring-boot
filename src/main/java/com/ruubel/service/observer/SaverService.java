@@ -8,6 +8,10 @@ import java.util.List;
 
 /**
  * Created by indrek.ruubel on 03/07/2016.
+ *
+ * This service is very interested in events that take place in BankService,
+ * so it subscribes itself to BankInformationPublisherService.
+ * This service chooses to "save" the results (for demo sake).
  */
 @Service
 public class SaverService implements BankInformationReceived {

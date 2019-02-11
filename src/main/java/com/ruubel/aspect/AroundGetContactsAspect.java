@@ -11,15 +11,26 @@ import java.time.LocalDateTime;
 
 /**
  * Created by indrek.ruubel on 03/07/2016.
+ *
+ * Proxy pattern:
+ * The intent of this pattern is to provide a "Placeholder" for an object to control references to it.
+ * https://www.oodesign.com/proxy-pattern.html
+ *
+ * Also we're using aspect-oriented programming here.
+ * https://en.wikipedia.org/wiki/Aspect-oriented_programming
  */
 @Aspect
 @Component
 public class AroundGetContactsAspect {
 
 	@Pointcut("execution(* com.ruubel.service.BankService.*(..))")
-	public void exampleService() {}
+	public void serviceMethod() {}
 
-	@Around("exampleService()")
+	/**
+	 * In this case we wrap around the real method, controlling the input/output of that method, being a proxy.
+	 * As a simple example we measure method execution time.
+	 */
+	@Around("serviceMethod()")
 	public Object profile(ProceedingJoinPoint pjp) {
 		LocalDateTime start = LocalDateTime.now();
 		Object task = null;
