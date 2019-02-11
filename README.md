@@ -43,7 +43,7 @@ Once you have maven installed on your environment, install the project dependenc
 mvn install
 ```
 
-## Running the tests
+## Testing
 
 Run all tests:
 ```
