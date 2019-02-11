@@ -44,7 +44,7 @@ mvn install
 
 ## Running the tests
 
-All tests can be run:
+Run all tests:
 ```
 mvn test
 ```
