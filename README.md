@@ -62,6 +62,7 @@ Open browser and go to http://localhost:8080/api/v1/banks and you should see the
 ## Built With
 
 * [Spring Boot](https://spring.io/projects/spring-boot) - Spring Boot 2
+* [Spock](http://spockframework.org/) - Spock testing framework
 * [Maven](https://maven.apache.org/) - Dependency Management
 
 ## Contributing
