@@ -1,6 +1,7 @@
 package com.ruubel.service.factory;
 
 import com.ruubel.service.strategy.BankScraperStrategy;
+import com.ruubel.service.strategy.HttpFetchService;
 import com.ruubel.service.strategy.SebScraper;
 import com.ruubel.service.strategy.SwedbankScraper;
 import org.springframework.stereotype.Service;
@@ -20,8 +21,10 @@ import java.util.List;
 public class ScraperFactoryService {
 
 	private List<BankScraperStrategy> strategies;
+	private HttpFetchService httpFetchService;
 
 	public ScraperFactoryService() {
+		httpFetchService = new HttpFetchService();
 		strategies = createStrategies();
 	}
 
@@ -30,8 +33,8 @@ public class ScraperFactoryService {
 	 */
 	private List<BankScraperStrategy> createStrategies() {
 		return new ArrayList<BankScraperStrategy>() {{
-			add(new SebScraper());
-			add(new SwedbankScraper());
+			add(new SebScraper(httpFetchService));
+			add(new SwedbankScraper(httpFetchService));
 		}};
 	}
 
