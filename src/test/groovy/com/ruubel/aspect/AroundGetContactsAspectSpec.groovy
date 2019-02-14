@@ -19,7 +19,7 @@ class AroundGetContactsAspectSpec extends Specification {
             Object result = aspect.profile(pjp)
         then:
             1 * pjp.proceed() >> out
-            result == out
+            result == out + "1"
 
     }
 
