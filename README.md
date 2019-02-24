@@ -1,6 +1,8 @@
 # Design patterns in spring boot 
 [![CircleCI](https://circleci.com/gh/indrekru/design-patterns-spring-boot.svg?style=svg)](https://circleci.com/gh/indrekru/design-patterns-spring-boot) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20design%20patterns%20in%20spring%20boot%20https%3A%2F%2Fgithub.com%2Findrekru%2Fdesign-patterns-spring-boot)
 
+<img src="https://raw.githubusercontent.com/indrekru/design-patterns-spring-boot/master/img.png" width="200px">
+
 This repository is a simple spring boot application, that demonstrates a few design patterns:
 
 * Singleton
